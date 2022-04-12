@@ -5,6 +5,6 @@
     <h1>Operación Aduanera</h1>
 </div>
 <div>
-    <a class="btn btn-outline-primary" href="{{ route('operacion.create') }}">Crear</a>
+    <a class="btn btn-outline-secondary" href="{{ route('welcome') }}">Regresar</a>
 </div>
 @endsection
