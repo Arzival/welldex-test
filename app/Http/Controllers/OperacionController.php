@@ -26,7 +26,13 @@ class OperacionController extends Controller
      */
     public function create()
     {
-        return view('create');
+        try {
+            $folio = Operacion::max('folio');
+            $folio = $folio + 1;
+            return view('create', compact('folio'));
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     /**
@@ -37,7 +43,7 @@ class OperacionController extends Controller
      */
     public function store(Request $request)
     {
-        
+        return 'hola';
     }
 
     /**
