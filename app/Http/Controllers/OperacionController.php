@@ -16,7 +16,7 @@ class OperacionController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -33,6 +33,21 @@ class OperacionController extends Controller
         } catch (\Throwable $th) {
             //throw $th;
         }
+        //PARA USAR EN RESPUESTA DE API
+        // try {
+        //     $folio = Operacion::max('folio');
+        //     $folio = $folio + 1;
+        //     return response()->json([
+        //         'success' => true,
+        //         'msg' => 'OK',
+        //         'folio' => $folio
+        //     ],200);
+        // } catch (\Throwable $th) {
+        //     return response()->json([
+        //         'success' => false,
+        //         'msg' => 'ERROR FOLIO NO ENCONTRADO',
+        //     ],400);
+        // }
     }
 
     /**
@@ -43,7 +58,7 @@ class OperacionController extends Controller
      */
     public function store(Request $request)
     {
-        return 'hola';
+        return $request;
     }
 
     /**

@@ -61,14 +61,32 @@
                             <option value="2">Carga Suelta</option>
                         </select>
                     </div>
-                    
-                        <div class="col" id="contenedor">
-                            <button type="button" name="add" id="add" class="btn btn-success">Agregar Más</button>
+                    <div class="col" id="contenedor">
+                        <button type="button" name="add" id="add" class="btn btn-success">Agregar Más</button>
+                        <div class="form-group">
+                            <label for="no_contenedor">Num. Contenedor</label>
+                            <input type="text" class="form-control" name="no_contenedor[]" id="no_contenedor">
                         </div>
-                        <div class="col" id="carga_suelta">
-                            soy un carga suelta
+                        <div class="form-group">
+                            <label for="no_contenedor">Tipo</label>
+                            <input type="text" class="form-control" name="tipo_contenedor[]" id="tipo_contenedor">
                         </div>
-                    
+                        <div class="form-group">
+                            <label for="no_contenedor">Fecha de Descargo</label>
+                            <input type="date" class="form-control" name="fecha_descargo[]" id="fecha_descargo">
+                        </div>
+                    </div>
+                    <div class="col" id="carga_suelta">
+                        <div class="form-group">
+                            <label for="no_contenedor">Descripción</label>
+                            <input type="text" class="form-control" name="descripcion" id="descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label for="no_contenedor">Cantidad</label>
+                            <input type="number" class="form-control" name="cantidad" id="cantidad">
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col">
                     <div class="form-group">
@@ -79,10 +97,31 @@
                             <option value="2">Exportación</option>
                         </select>
                     </div>
+                    <div class="col" id="importacion">
+                        <div class="form-group">
+                            <label for="pais">Pais de Origen</label>
+                            <input type="text" class="form-control" name="pais" id="pais">
+                        </div>
+                        <div class="form-group">
+                            <label for="no_contenedor">Fecha de Arribo</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha">
+                        </div>
+                    </div>
+                    <div class="col" id="exportacion">
+                        <div class="form-group">
+                        <label for="pais">Pais destino</label>
+                        <input type="text" class="form-control" name="pais" id="pais">
+                    </div>
+                    <div class="form-group">
+                        <label for="no_contenedor">Fecha de Zarpe</label>
+                        <input type="date" class="form-control" name="fecha" id="fecha">
+                    </div>
+                    
                 </div>
             </div>
-            <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
-        </form>
+    </div>
+    <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
+    </form>
     </div>
 @endsection
 @section('scripts')

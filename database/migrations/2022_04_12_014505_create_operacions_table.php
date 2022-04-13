@@ -16,14 +16,14 @@ class CreateOperacionsTable extends Migration
         Schema::create('operacions', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('folio');
-            $table->integer('pedimento');
-            $table->string('cliente');
-            $table->string('aduana');
-            $table->string('patente');
-            $table->integer('t_mercancia');
-            $table->integer('t_operacion');
-            $table->string('estatus');
+            $table->integer('folio')->nullable();
+            $table->integer('pedimento')->nullable();
+            $table->string('cliente')->nullable();
+            $table->string('aduana')->nullable();
+            $table->string('patente')->nullable();
+            $table->integer('t_mercancia')->nullable();
+            $table->integer('t_operacion')->nullable();
+            $table->string('estatus')->nullable();
 
             $table->timestamps();
         });

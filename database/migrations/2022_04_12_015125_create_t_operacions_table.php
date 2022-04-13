@@ -16,11 +16,11 @@ class CreateTOperacionsTable extends Migration
         Schema::create('t_operacions', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('operacion_id');
+            $table->unsignedBigInteger('operacion_id')->nullable();
             $table->foreign('operacion_id')->references('id')->on('operacions');
 
-            $table->date('fecha');
-            $table->string('pais');
+            $table->date('fecha')->nullable();
+            $table->string('pais')->nullable();
 
             $table->timestamps();
         });

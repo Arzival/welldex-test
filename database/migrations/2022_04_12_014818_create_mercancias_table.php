@@ -16,7 +16,7 @@ class CreateMercanciasTable extends Migration
         Schema::create('mercancias', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('operacion_id');
+            $table->unsignedBigInteger('operacion_id')->nullable();
             $table->foreign('operacion_id')->references('id')->on('operacions');
             //contenedores
             $table->integer('no_contenedor')->nullable();
