@@ -19,5 +19,5 @@ class Operacion extends Model
         't_operacion',
         'estatus',
     ];
-    
+
 }

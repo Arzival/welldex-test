@@ -16,10 +16,7 @@ class Mercancia extends Model
         'fecha_descargo',
         'descripcion',
         'cantidad',
+        'operacion_id',
     ];
 
-    public function operacion()
-    {
-        return $this->belongsTo('App\Models\Operacion');
-    }
 }

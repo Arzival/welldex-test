@@ -19,7 +19,7 @@ $(document).ready(function(){
         var contenedor = document.getElementById('contenedor');
         var div = document.createElement('div');
             div.setAttribute('class', 'form-group');
-            div.innerHTML = '<div class="form-group"><label for="no_contenedor">Num. Contenedor</label><input type="text" class="form-control" name="no_contenedor[]" id="no_contenedor"></div><div class="form-group"><label for="no_contenedor">Tipo</label><input type="text" class="form-control" name="tipo_contenedor[]" id="tipo_contenedor"></div><div class="form-group"><label for="no_contenedor">Fecha de Descargo</label><input type="date" class="form-control" name="fecha_descargo[]" id="fecha_descargo"></div>';
+            div.innerHTML = '<div class="form-group"><label for="no_contenedor">Num. Contenedor</label><input type="text" class="form-control" name="no_contenedor[]" id="no_contenedor"></div><div class="form-group"><label for="no_contenedor">Tipo</label><input type="text" class="form-control" name="tipo_contenedor[]" id="tipo_contenedor"></div><div class="form-group"><label for="dimenciones">Dimenciones</label><input type="text" class="form-control" name="dimenciones[]" id="dimenciones"></div><div class="form-group"><label for="no_contenedor">Fecha de Descargo</label><input type="date" class="form-control" name="fecha_descargo[]" id="fecha_descargo"></div>';
             contenedor.appendChild(div);
     });
 

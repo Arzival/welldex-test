@@ -14,8 +14,5 @@ class TOperacion extends Model
         'pais',
     ];
 
-    public function operacion()
-    {
-        return $this->belongsTo('App\Models\Operacion');
-    }
+
 }

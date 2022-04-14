@@ -72,10 +72,15 @@
                             <input type="text" class="form-control" name="tipo_contenedor[]" id="tipo_contenedor">
                         </div>
                         <div class="form-group">
+                            <label for="dimenciones">Dimenciones</label>
+                            <input type="text" class="form-control" name="dimenciones[]" id="dimenciones">
+                        </div>
+                        <div class="form-group">
                             <label for="no_contenedor">Fecha de Descargo</label>
                             <input type="date" class="form-control" name="fecha_descargo[]" id="fecha_descargo">
                         </div>
                     </div>
+
                     <div class="col" id="carga_suelta">
                         <div class="form-group">
                             <label for="no_contenedor">Descripción</label>
@@ -109,19 +114,19 @@
                     </div>
                     <div class="col" id="exportacion">
                         <div class="form-group">
-                        <label for="pais">Pais destino</label>
-                        <input type="text" class="form-control" name="pais" id="pais">
+                            <label for="pais">Pais destino</label>
+                            <input type="text" class="form-control" name="pais" id="pais">
+                        </div>
+                        <div class="form-group">
+                            <label for="no_contenedor">Fecha de Zarpe</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha">
+                        </div>
+
                     </div>
-                    <div class="form-group">
-                        <label for="no_contenedor">Fecha de Zarpe</label>
-                        <input type="date" class="form-control" name="fecha" id="fecha">
-                    </div>
-                    
                 </div>
             </div>
-    </div>
-    <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
-    </form>
+            <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
+        </form>
     </div>
 @endsection
 @section('scripts')
