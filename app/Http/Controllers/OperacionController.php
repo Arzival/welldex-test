@@ -68,32 +68,6 @@ class OperacionController extends Controller
         
     }
 
-    private function validateContenedor($request, $numero_contenedores)
-    {
-        for ($i=0; $i < $numero_contenedores; $i++) { 
-            ($request['no_contenedor'][$i] == '' || $request['tipo_contenedor'][$i] == '' || $request['dimenciones'][$i] == '' || $request['fecha_descargo'][$i] == '') ? $validate = false : $validate = true;
-        }
-        return $validate;
-    }
-
-    private function storeContenedor($request, $operacion, $numero_contenedores)
-    {
-        try {
-            for ($i=0; $i < $numero_contenedores; $i++) { 
-                Mercancia::create([
-                    'operacion_id' => $operacion->id,
-                    'no_contenedor' => $request['no_contenedor'][$i],
-                    'tipo_contenedor' => $request['tipo_contenedor'][$i],
-                    'dimenciones' => $request['dimenciones'][$i],
-                    'fecha_descargo' => $request['fecha_descargo'][$i],
-                ]);
-            }
-            return true;
-        } catch (\Throwable $th) {
-            return false;
-        }
-    }
-
     private function storeContenedoresOperacion($request,$numero_contenedores)
     {
         $validation = $this->validateContenedor($request, $numero_contenedores);
@@ -120,6 +94,33 @@ class OperacionController extends Controller
         }
         return $respuesta;
     }
+
+    private function validateContenedor($request, $numero_contenedores)
+    {
+        for ($i=0; $i < $numero_contenedores; $i++) { 
+            ($request['no_contenedor'][$i] == '' || $request['tipo_contenedor'][$i] == '' || $request['dimenciones'][$i] == '' || $request['fecha_descargo'][$i] == '') ? $validate = false : $validate = true;
+        }
+        return $validate;
+    }
+
+    private function storeContenedor($request, $operacion, $numero_contenedores)
+    {
+        try {
+            for ($i=0; $i < $numero_contenedores; $i++) { 
+                Mercancia::create([
+                    'operacion_id' => $operacion->id,
+                    'no_contenedor' => $request['no_contenedor'][$i],
+                    'tipo_contenedor' => $request['tipo_contenedor'][$i],
+                    'dimenciones' => $request['dimenciones'][$i],
+                    'fecha_descargo' => $request['fecha_descargo'][$i],
+                ]);
+            }
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
 
     private function storeCargaSuelta($request)
     {
