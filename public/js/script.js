@@ -29,11 +29,11 @@ $(document).ready(function(){
         var t_operacion = $("#t_operacion").val();
         console.log(t_operacion);
         if(t_operacion == '1'){
-            document.getElementById('importacion').style.display = 'none';
-            document.getElementById('exportacion').style.display = 'block';
-        }else if(t_operacion == '2'){
             document.getElementById('importacion').style.display = 'block';
             document.getElementById('exportacion').style.display = 'none';
+        }else if(t_operacion == '2'){
+            document.getElementById('importacion').style.display = 'none';
+            document.getElementById('exportacion').style.display = 'block';
         }else{
             document.getElementById('importacion').style.display = 'none';
             document.getElementById('exportacion').style.display = 'none';

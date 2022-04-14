@@ -19,8 +19,8 @@ class CreateTOperacionsTable extends Migration
             $table->unsignedBigInteger('operacion_id')->nullable();
             $table->foreign('operacion_id')->references('id')->on('operacions');
 
-            $table->date('fecha')->nullable();
-            $table->string('pais')->nullable();
+            $table->date('fecha');
+            $table->string('pais');
 
             $table->timestamps();
         });

@@ -12,6 +12,7 @@ class TOperacion extends Model
     protected $fillable = [
         'fecha',
         'pais',
+        'operacion_id',
     ];
 
 
